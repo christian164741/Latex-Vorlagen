@@ -1,54 +1,50 @@
 # Vorlagen – LaTeX Project
 
-Dies ist das LaTeX-Projekt für das Buch **„Photon – Theorie und Anwendungen“** in deutscher und englischer Version.
+
 
 ## 📂 Projektstruktur
 
 ```
-book/
-├── bib/              # Zentrale Bibliothek (gemeinsam für de/en)
+Vorlage-book/
+├── bib/                 # Zentrale Bibliographie (DE/EN)
 │   └── literatur.bib
 │
-├── de/               # Deutsche Version
+├── de/                  # Deutsche Version
 │   ├── main.tex
 │   ├── chapters/
 │   ├── appendix/
 │   ├── bilder/
 │   └── cover/
 │
-├── en/               # Englische Version
+├── en/                  # Englische Version
 │   ├── main.tex
 │   ├── chapters/
 │   ├── appendix/
 │   ├── bilder/
 │   └── cover/
 │
-├── styles/              # Zentrale Styles und Makros
-│   ├── print.de.sty     # deutsche Version
-│   ├── print.en.sty #englische Version
-│
-└── README.md
+└── styles/              # Globale Styles & Makros
+    ├── print.de.sty
+    ├── print.en.sty
 
-paper/
-│
+Vorlage-paper/
 ├── bib/
-│ └── literatur.bib # Gemeinsame Literaturdatenbank (BibLaTeX)
+│   └── literatur.bib
 │
-├── de/ # Deutsche Version
-│ ├── main.tex # Hauptdatei (Deutsch)
-│ ├── captures/ # Kapitel
-│ ├── figures/ # Abbildungen 
+├── de/                  # Deutsche Version
+│   ├── main.tex
+│   ├── captures/
+│   └── figures/
 │
-├── en/ # Englische Übersetzung
-│ ├── compton_en.tex # Main file (English)
-│ ├── captures/ # English captions
-│ ├── figures/ # Figures 
+├── en/                  # Englische Version
+│   ├── compton_en.tex
+│   ├── captures/
+│   └── figures/
 │
-├── styles/
-│ ├── paper-style-de.sty # Stilvorlage für deutsche Version
-│ └── paper-style-en.sty # Style file for English version
-│
-└── README.md
+└── styles/
+    ├── paper-style-de.sty
+    └── paper-style-en.sty
+
 ```
 
 ## 📖 Kompilieren
@@ -56,7 +52,8 @@ paper/
 ### 1. Deutsche Version
 ```
 cd de
-main.tex
+pdflatex main.tex
+
 
 ```
 ### 2. Englische Version
@@ -71,26 +68,30 @@ main_eng.tex
 - "Erzeugen & Ansicht" → Standard: `pdflatex → biber → makeindex → pdflatex ×2`
 
 ## 📚 Literatur
+```
+bib/literatur.bib
 
-- Zentrale Bibliothek: `bib/literatur.bib`
-- Wird in beiden Versionen mit  
-  ```latex
-  \addbibresource{../bib/literatur.bib}
-  ```  
-  eingebunden.
 
+```
 ## 🔤 Index
 
-- Definiert in `styles/index.sty` mit `imakeidx`
-- Ausgabe am Ende von `main.tex`:
-  ```latex
-  \printindex[myindex]
-  ```
+```
+\printindex[myindex]
+
+```
 - Ignoriere temporäre Index-Dateien in `.gitignore`:
   ```
-  *.idx
-  *.ind
-  *.ilg
+ *.aux
+*.log
+*.bbl
+*.blg
+*.toc
+*.idx
+*.ind
+*.ilg
+*.out
+*.pdf
+
   ```
 
 ## 🗂️ GitHub-Hinweise
