@@ -1,5 +1,5 @@
 Vorlage-book/
-'''
+```
 ├── bib/                 # Zentrale Literaturdatenbank (BibLaTeX)
 │   └── literatur.bib
 │
@@ -20,6 +20,6 @@ Vorlage-book/
 └── styles/              # Globale Styles & Makros
     ├── print.de.sty     # Style für deutsche Ausgabe
     ├── print.en.sty     # Style für englische Ausgabe
-'''
+```
 cd de
 pdflatex main.tex
