@@ -79,20 +79,7 @@ bib/literatur.bib
 \printindex[myindex]
 
 ```
-- Ignoriere temporäre Index-Dateien in `.gitignore`:
-  ```
- *.aux
-*.log
-*.bbl
-*.blg
-*.toc
-*.idx
-*.ind
-*.ilg
-*.out
-*.pdf
 
-  ```
 
 ## 🗂️ GitHub-Hinweise
 
