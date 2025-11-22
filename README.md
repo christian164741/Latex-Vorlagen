@@ -1,11 +1,11 @@
-# Photon Book – LaTeX Project
+# Vorlagen – LaTeX Project
 
 Dies ist das LaTeX-Projekt für das Buch **„Photon – Theorie und Anwendungen“** in deutscher und englischer Version.
 
 ## 📂 Projektstruktur
 
 ```
-photon-book/
+book/
 ├── bib/              # Zentrale Bibliothek (gemeinsam für de/en)
 │   └── literatur.bib
 │
@@ -26,6 +26,27 @@ photon-book/
 ├── styles/              # Zentrale Styles und Makros
 │   ├── print.de.sty     # deutsche Version
 │   ├── print.en.sty #englische Version
+│
+└── README.md
+
+paper/
+│
+├── bib/
+│ └── literatur.bib # Gemeinsame Literaturdatenbank (BibLaTeX)
+│
+├── de/ # Deutsche Version
+│ ├── main.tex # Hauptdatei (Deutsch)
+│ ├── captures/ # Kapitel
+│ ├── figures/ # Abbildungen 
+│
+├── en/ # Englische Übersetzung
+│ ├── compton_en.tex # Main file (English)
+│ ├── captures/ # English captions
+│ ├── figures/ # Figures 
+│
+├── styles/
+│ ├── paper-style-de.sty # Stilvorlage für deutsche Version
+│ └── paper-style-en.sty # Style file for English version
 │
 └── README.md
 ```
