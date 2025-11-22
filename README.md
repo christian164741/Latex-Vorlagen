@@ -1,95 +1,23 @@
-# Vorlagen – LaTeX Project
+# 📚 LaTeX-Vorlagen – Templates für Bücher & wissenschaftliche Papers
 
+Dieses Repository enthält professionelle LaTeX-Vorlagen für größere Buchprojekte und wissenschaftliche Papers — jeweils in deutscher und englischer Version.  
+Struktur, Styles, Bibliographie und Index sind modular aufgebaut und können für beliebige Projekte weiterverwendet werden.
 
+**Bestandteile:**
 
-## 📂 Projektstruktur
-
-```
-Vorlage-book/
-├── bib/                 # Zentrale Bibliographie (DE/EN)
-│   └── literatur.bib
-│
-├── de/                  # Deutsche Version
-│   ├── main.tex
-│   ├── chapters/
-│   ├── appendix/
-│   ├── bilder/
-│   └── cover/
-│
-├── en/                  # Englische Version
-│   ├── main.tex
-│   ├── chapters/
-│   ├── appendix/
-│   ├── bilder/
-│   └── cover/
-│
-└── styles/              # Globale Styles & Makros
-    ├── print.de.sty
-    ├── print.en.sty
-
-Vorlage-paper/
-├── bib/
-│   └── literatur.bib
-│
-├── de/                  # Deutsche Version
-│   ├── main.tex
-│   ├── captures/
-│   └── figures/
-│
-├── en/                  # Englische Version
-│   ├── compton_en.tex
-│   ├── captures/
-│   └── figures/
-│
-└── styles/
-    ├── paper-style-de.sty
-    └── paper-style-en.sty
-
-```
-
-## 📖 Kompilieren
-
-### 1. Deutsche Version
-```
-cd de
-pdflatex main.tex
-
-
-```
-### 2. Englische Version
-```
-cd en
-main_eng.tex
-```
-
-👉 In **TeXstudio** reicht es, `main.tex` zu kompilieren, wenn folgende Einstellungen aktiv sind:
-- Bibliographie-Tool: **Biber**
-- Index-Tool: **MakeIndex** oder **Xindy** (empfohlen für Umlaute)
-- "Erzeugen & Ansicht" → Standard: `pdflatex → biber → makeindex → pdflatex ×2`
-
-## 📚 Literatur
-```
-bib/literatur.bib
-
-
-```
-## 🔤 Index
-
-```
-\printindex[myindex]
-
-```
-
-
-## 🗂️ GitHub-Hinweise
-
-- Temporäre LaTeX-Dateien (aux, log, bbl, blg, toc, pdf …) sind in `.gitignore`.
-- Im Repo liegen nur die **Quellen** (Tex, Bib, Bilder, Styles).
-- PDFs werden lokal erzeugt, nicht im Repo gespeichert.
+- 📘 **Buch-Vorlage** (DE/EN)  
+- 📄 **Paper-Vorlage** (DE/EN)  
+- 🔧 zentrale Styles, Bibliographien und Strukturelemente  
+- ✍️ Fokus auf klare Struktur, Wiederverwendbarkeit und Open-Science-Workflow
 
 ---
 
-✍️ **Autor:** Christian Weilharter, Dipl.-Ing. (FH)  
-📅 Stand: Oktober 2025
+## 📂 Projektstruktur
 
-- 🌐 Website: [https://mathandphysics.de](https://mathandphysics.de)
+```text
+Latex-Vorlagen/
+├── Vorlage-book/      # LaTeX-Vorlage für Bücher (DE/EN)
+├── Vorlage-paper/     # LaTeX-Vorlage für wissenschaftliche Papers (DE/EN)
+├── .gitignore         # Ignoriert LaTeX-Tempdateien
+└── README.md          # Diese Datei
+
