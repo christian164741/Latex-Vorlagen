@@ -22,14 +22,18 @@
 % Serien- und Publikationsmetadaten
 % =============================================================
 \newcommand{\SeriesTitle}{Theoretische Physik – Herleitungen im historischen Kontext}
-\newcommand{\PaperTitle}{Der Compton-Effekt – Herleitung, Geschichte und Anwendungen}
+%\newcommand{\PaperTitle}{Der Compton-Effekt – Herleitung, Geschichte und Anwendungen}
+
 \newcommand{\PaperAuthor}{Christian Weilharter}
 \newcommand{\PaperDate}{26.\ Oktober\ 2025}
+\newcommand{\PaperTitle}{\LARGE\textbf{Warum das Photon (nahezu) masselos sein muss}\\[0.4em]
+	{\large Von der Eichsymmetrie zu astrophysikalischen Grenzwerten\par}}
 
 \newcommand{\PaperDOI}{\emph{DOI (Zenodo)}: \texttt{10.5281/zenodo.xxxxxxx}}
 \newcommand{\PaperISBNPDF}{\emph{ISBN (Print)}: 978-3-xxxx-xxxx-x}
 \newcommand{\PaperISBNEPUB}{\emph{ISBN (E-Book)}: 978-3-xxxx-xxxx-x}
-\newcommand{\PaperKeywords}{Compton-Effekt; Quantenphysik; Röntgenstreuung; Photonenimpuls; Vierervektoren}
+\newcommand{\PaperKeywords}{Photonenmasse, Eichsymmetrie, Proca-Theorie, Quantenelektrodynamik, astrophysikalische Grenzwerte, Photon-Helizität
+}
 
 % ---------- Metadatenblock ----------
 \newcommand{\PaperMetadata}{
@@ -58,25 +62,65 @@
 \begin{document}
 	
 	\thispagestyle{empty}
+
+\begin{titlepage}
 	\begin{center}
-		{\Huge\bfseries \PaperTitle\par}
-		\vspace{0.5em}
-		{\Large\itshape \SeriesTitle\par}
-		\vspace{2em}
-		{\Large \PaperAuthor\par}
-		\vspace{0.5em}
-		{\large \PaperDate\par}
+		
+		
+		
+		\vspace*{1.8cm}
+		
+		% --- TITLE ---
+		\PaperTitle 
+		
+		% --- Series Title: viel näher dran! ---
+		\vspace{0.6cm}
+		
+		%	{\large\textit\SeriesTitle }
+		% \vspace{1.6cm}
+		
+		% --- AUTHOR ---
+		
+		{\Large\PaperAuthor}
+		\vspace{0.65cm}
+		
+		% --- DATE ---
+		{\large\PaperDate}
+		
+		\vfill
 	\end{center}
+	% --- DOI / ISBN ---
 	
-	\PaperMetadata
+	{\small
+		
+		
+		\noindent\PaperDOI\\
+		%	\PaperISBNPDF\\
+		\PaperISBNEPUB\\
+		\textit{Keywords:} \PaperKeywords
+		
+	}
 	
-	\vspace{1em}
-	\hrule
-	\vspace{1em}
+\end{titlepage}
+	\section*{Abstract}
 	
-	\noindent\textbf{Kurzfassung.}  
-	Dieses Paper verbindet eine kompakte Herleitung der Compton-Formel mit dem historischen Kontext von Planck bis Compton und skizziert Anwendungen in der modernen Physik. Der Fokus liegt auf Verständlichkeit, mathematischer Präzision und der Einbettung in die Wissenschaftsgeschichte.
+	Dieses Paper untersucht die Frage, warum das Photon mit äußerst hoher 
+	Genauigkeit masselos sein muss. Ausgehend von der $U(1)$-Eichsymmetrie 
+	zeigen wir, dass ein Masseterm die Struktur der Maxwell-Gleichungen, die 
+	Ladungserhaltung und die fundamentalen Eigenschaften des elektromagnetischen 
+	Feldes verändern würde. Astrophysikalische Beobachtungen – von galaktischen 
+	Magnetfeldern bis hin zu Messungen im Sonnensystem – liefern extrem strenge 
+	Obergrenzen für eine mögliche Photonenmasse.
 	
+	Im Rahmen der Quantenelektrodynamik erfordert die Renormierbarkeit außerdem 
+	ein masseloses Eichboson. Einen zusätzlichen konzeptionellen Hinweis bietet 
+	die Helizitätsstruktur verschränkter Photonen: Sämtliche Experimente stimmen 
+	exakt mit einem Zweizustands-System überein. Ein massives Photon hätte jedoch 
+	einen longitudinalen Polarisationsmodus, dessen experimentelle Signatur klar 
+	erkennbar wäre – bislang jedoch nicht beobachtet wurde.
+	
+	Diese theoretischen und empirischen Argumente ergeben ein konsistentes Bild: 
+	Das Photon ist, innerhalb der experimentellen Grenzen, tatsächlich masselos.
 	\vspace{1em}
 	\hrule
 	\vspace{2em}
@@ -94,73 +138,56 @@
 	\include{chapters/chapter07}
     \include{chapters/chapter08}
 	\include{chapters/chapter09}
+\section*{Danksagung}
+
+Diese Arbeit entstand unter Nutzung moderner KI-gestützter Werkzeuge 
+(einschließlich ChatGPT) als intellektueller Co-Pilot für Strukturierung, 
+sprachliche Ausarbeitung und iterative Weiterentwicklung. Die gesamte 
+wissenschaftliche Verantwortung, physikalische Argumentation und 
+endgültige inhaltliche Prüfung liegen vollständig beim Autor.
 
 	
-	% =============================================================
-	% Literatur
-	% =============================================================
-	\renewcommand*{\bibfont}{\small}
-	
-	\printbibliography
-	% =============================================================
-	% Rückseite
-	% =============================================================
-	\clearpage
-	\thispagestyle{empty}
-	
-	\vspace*{1.5cm}
-	
-	{\Large\bfseries Der Compton-Effekt}\\[0.5em]
-	{\large\itshape Herleitung, Geschichte und Anwendungen}
-	
-	\vspace{1.2cm}
-	
-	\noindent
-	\textbf{Über dieses Paper}\\
-	Der Compton-Effekt markiert einen Wendepunkt in der Physik:
-	Zum ersten Mal ließ sich eindeutig zeigen, dass Licht nicht
-	nur Welleneigenschaften besitzt, sondern auch Impuls überträgt –
-	wie ein Teilchen. Dieses Paper stellt die Herleitung der
-	Compton-Formel verständlich und prägnant dar, ergänzt durch den
-	historischen Kontext und die Bedeutung für die moderne Physik.
-	
 	\vspace{1.0cm}
-	
-	\noindent
-	\textbf{Open Access}\\
-	Die \emph{kostenlose} PDF-Version ist verfügbar unter:\\[2pt]
-	\href{https://doi.org/10.5281/zenodo.xxxxxxx}{\texttt{https://doi.org/10.5281/zenodo.xxxxxxx}}
-	
-	\vspace{0.8cm}
-	
-	\noindent
-	\textbf{Serie}\\
-	\textit{Theoretische Physik – Herleitungen im historischen Kontext}\\
-	Weitere Hefte und Materialien:\\
-	\href{https://mathandphysics.de}{\texttt{mathandphysics.de}}
-	
-	\vfill
-	
-	\noindent
+
+\noindent
+\textbf{Open Access}\\
+The \emph{free} PDF-Version ist verfügbar unter:\\[2pt]
+\href{https://doi.org/10.5281/zenodo.xxxxxxx}{\texttt{https://doi.org/10.5281/zenodo.xxxxxxx}}
+
+\vspace{0.8cm}
+
+\noindent
+\textbf{Reihe}\\
+%	\textit{Theoretical Physics – Derivations in Historical Context}\\
+Weitere Arbeiten und Materialien:\\
+\href{https://mathandphysics.eu}{\texttt{mathandphysics.eu}}
+
+\vfill
+
+\noindent
+\small
+\textit{Bibliografische Angaben}\\
+\PaperDOI\\
+%	\PaperISBNPDF\\
+\PaperISBNEPUB
+
+\vspace{0.8cm}
+
+\noindent
+\footnotesize
+
+© 2025 Christian Weilharter — Alle Rechte vorbehalten.
+
+
+Gedruckt auf Anfrage über Amazon KDP. Satz in \LaTeX.
+\vfill
+\begin{center}
 	\small
-	\textit{Bibliografische Angaben}\\
-	\PaperDOI\\
-	\PaperISBNPDF\\
-	\PaperISBNEPUB
-	
-	\vspace{0.8cm}
-	
-	\noindent
-	\footnotesize
-	© 2025 Christian Weilharter — Alle Rechte vorbehalten.\\
-	Gedruckt auf Abruf über Amazon KDP. Satz: \LaTeX.
-	
-	\vfill
-	\begin{center}
-		\small
-		\textit{Math \& Physics Paper Series – Open Access unter}\\[2pt]
-		\href{https://mathandphysics.de}{\texttt{https://mathandphysics.de}} \, | \,
-		\href{https://zenodo.org/communities/mathandphysics}{\texttt{Zenodo: Math \& Physics Open Science Collection}}
-	\end{center}
+\textit{Math \& Physics Paper Series – Frei zugänglich unter}\\[2pt]
+
+	\href{https://mathandphysics.eu}{\texttt{https://mathandphysics.de}} \, | \,
+	\href{https://zenodo.org/communities/mathandphysics}{\texttt{Zenodo: Math \& Physics Open Science Collection}}
+\end{center}
+
 	
 \end{document}

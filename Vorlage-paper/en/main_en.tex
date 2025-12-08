@@ -17,15 +17,21 @@
 % =============================================================
 % Series and publication metadata
 % =============================================================
-\newcommand{\SeriesTitle}{Theoretical Physics – Derivations in Historical Context}
-\newcommand{\PaperTitle}{The Compton Effect – Derivation, History, and Applications}
+\newcommand{\SeriesTitle}{Theoretical Physics – Derivations in Historical Context\par}
+ 
+\newcommand{\PaperTitle}{\LARGE\textbf{Why the Photon Must Be (Almost) Massless}\\[0.4em]
+	{\large From Gauge Symmetry to Astrophysical Limits\par}}
+
+
+
 \newcommand{\PaperAuthor}{Christian Weilharter}
 \newcommand{\PaperDate}{October 26, 2025}
 
 \newcommand{\PaperDOI}{\emph{DOI (Zenodo)}: \texttt{10.5281/zenodo.xxxxxxx}}
 \newcommand{\PaperISBNPDF}{\emph{ISBN (Print)}: 978-3-xxxx-xxxx-x}
 \newcommand{\PaperISBNEPUB}{\emph{ISBN (E-Book)}: 978-3-xxxx-xxxx-x}
-\newcommand{\PaperKeywords}{Compton Effect; Quantum Physics; X-ray Scattering; Photon Momentum; Four-Vectors}
+\newcommand{\PaperKeywords}{photon mass, gauge symmetry, Proca theory, quantum electrodynamics, astrophysical limits, photon helicity
+}
 
 % ---------- Metadata block ----------
 \newcommand{\PaperMetadata}{
@@ -34,7 +40,7 @@
 		\small
 		\setlength{\parskip}{3pt}
 		\noindent\PaperDOI\\
-		\PaperISBNPDF\\
+	%	\PaperISBNPDF\\
 		\PaperISBNEPUB\\
 		\textit{Keywords:} \PaperKeywords
 	\end{flushleft}
@@ -44,30 +50,63 @@
 % =============================================================
 % Title
 % =============================================================
-\title{\PaperTitle\\[0.5em]\large \SeriesTitle}
-\author{\PaperAuthor}
-\date{\PaperDate}
+
 
 \begin{document}
 	\thispagestyle{empty}
-	\begin{center}
-		{\Huge\bfseries \PaperTitle\par}
-		\vspace{0.5em}
-		{\Large\itshape \SeriesTitle\par}
-		\vspace{2em}
-		{\Large \PaperAuthor\par}
-		\vspace{0.5em}
-		{\large \PaperDate\par}
-	\end{center}
 	
-	\PaperMetadata
+	\begin{titlepage}
+	\begin{center}
+		
+	
+		
+		\vspace*{1.8cm}
+		
+		% --- TITLE ---
+			\PaperTitle 
+	
+		% --- Series Title: viel näher dran! ---
+		\vspace{0.6cm}
+	
+    %	{\large\textit\SeriesTitle }
+		% \vspace{1.6cm}
+		
+		% --- AUTHOR ---
+	
+	    {\Large\PaperAuthor}
+		\vspace{0.65cm}
+		
+		% --- DATE ---
+		{\large\PaperDate}
+		
+		\vfill
+	\end{center}
+		% --- DOI / ISBN ---
+	
+		{\small
+		
+		
+		\noindent\PaperDOI\\
+	%	\PaperISBNPDF\\
+	\PaperISBNEPUB\\
+	\textit{Keywords:} \PaperKeywords
+		
+		}
+		
+	\end{titlepage}
+	
+	%\PaperMetadata
 	
 	\vspace{1em}
 	\hrule
 	\vspace{1em}
 	
 	\noindent\textbf{Abstract.}  
-	This paper combines a compact derivation of the Compton formula with the historical context from Planck to Compton and outlines its applications in modern physics. The focus is on clarity, mathematical precision, and the integration of physical theory into its historical development.
+	
+		This paper examines why the photon must be (almost) massless by combining 
+		
+	
+	
 	
 	\vspace{1em}
 	\hrule
@@ -86,7 +125,7 @@
 	\include{chapters/chapter06}
 	\include{chapters/chapter07}
 	\include{chapters/chapter08}
-	%\include{chapters/chapter09}
+	\include{chapters/chapter09}
 	
 	
 	
@@ -99,11 +138,18 @@
 	
 
 	
-	\section{Conclusion}
-	A concise summary (about 150–200 words): What does the Compton effect reveal about the nature of light? Relevance to modern physics.
+
 	
-	\section*{Acknowledgments (optional)}
-	Brief thanks to collaborators, institutions, or funding sources.
+	
+
+	\section*{Acknowledgments}
+	
+	This work was created in collaboration with modern AI-based tools 
+	(including ChatGPT) used as an intellectual co-pilot for structuring, 
+	language refinement, and iterative development. All scientific 
+	responsibility, physical reasoning, and final validation remain entirely 
+	with the author.
+	
 	
 	% =============================================================
 	% References
@@ -122,21 +168,18 @@
 	
 	\vspace*{1.5cm}
 	
-	{\Large\bfseries The Compton Effect}\\[0.5em]
-	{\large\itshape Derivation, History, and Applications}
+	{\Large\bfseries Why the Photon Must Be (Almost) Massless}\\[0.5em]
+%	{\large\itshape Derivation, History, and Applications}
 	
 	\vspace{1.2cm}
 	
 	\noindent
 	\textbf{About this Paper}\\
-	The Compton effect marks a turning point in physics:
-	For the first time, it was shown unambiguously that light not only
-	exhibits wave properties but also transfers momentum—like a particle.
-	This paper presents a clear and concise derivation of the Compton
-	formula, complemented by its historical background and significance
-	for modern physics.
+
 	
-	\vspace{1.0cm}
+	This work has examined the question of whether the photon could possess a 
+
+	
 	
 	\noindent
 	\textbf{Open Access}\\
@@ -147,7 +190,7 @@
 	
 	\noindent
 	\textbf{Series}\\
-	\textit{Theoretical Physics – Derivations in Historical Context}\\
+%	\textit{Theoretical Physics – Derivations in Historical Context}\\
 	More papers and materials:\\
 	\href{https://mathandphysics.eu}{\texttt{mathandphysics.eu}}
 	
@@ -157,7 +200,7 @@
 	\small
 	\textit{Bibliographic Information}\\
 	\PaperDOI\\
-	\PaperISBNPDF\\
+%	\PaperISBNPDF\\
 	\PaperISBNEPUB
 	
 	\vspace{0.8cm}
