@@ -63,19 +63,29 @@ bottom=1in
 % -------------------------------------------------
 % Inhaltsverzeichnis
 % -------------------------------------------------
-\RequirePackage{tocstyle}
-\usetocstyle{KOMAlike}
 \RequirePackage{tocloft}
 
-% Abstände und Einrückungen im ToC
-\setlength{\cftbeforesecskip}{0.2em}
-\setlength{\cftbeforesubsecskip}{0.1em}
-\cftsetindents{chapter}{0em}{3.0em}
-\cftsetindents{section}{1.5em}{3.8em}
-\cftsetindents{subsection}{3.5em}{4.8em}
-\renewcommand{\cftchapnumwidth}{3em}
-\renewcommand{\cftsecnumwidth}{4em}
-\renewcommand{\cftsubsecnumwidth}{5em}
+% Abstände
+\setlength{\cftbeforesubsecskip}{0.2em}
+\setlength{\cftbeforesubsubsecskip}{0.1em}
+
+% Kapitel (optional)
+\cftsetindents{chapter}{0em}{2.6em}
+
+% HIER ist der Punkt: gleiche Textkante für 1.1 und 1.1.1
+\cftsetindents{subsection}{1.5em}{2.8em}
+\cftsetindents{subsubsection}{1.5em}{2.8em}
+
+% Nummernspaltenbreiten konsistent
+\renewcommand{\cftsubsecnumwidth}{2.8em}
+\renewcommand{\cftsubsubsecnumwidth}{2.8em}
+
+% Mehr Abstand vor der Seitenzahl im Inhaltsverzeichnis
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftchappagefont}{\normalfont}
+\makeatletter
+\renewcommand{\cftchapfillnum}[1]{\cftdotfill{\cftdotsep}\hspace{0.8em}#1}
+\makeatother
 
 % -------------------------------------------------
 % Kopf- und Fußzeilen (fancyhdr-Konfiguration)
@@ -114,14 +124,32 @@ bottom=1in
 	\fancyfoot[LE,RO]{\thepage}
 	\renewcommand{\headrulewidth}{0pt}
 }
+% --- Subsection soll die erste Ebene unter Kapitel sein: 1.1, 1.2, ...
+\usepackage{chngcntr}
 
-% -------------------------------------------------
-% Nummerierungen
-% -------------------------------------------------
+% Nummernformate
 \renewcommand*{\thechapter}{\Roman{chapter}}          % Kapitel: I, II, ...
-\renewcommand*{\thesection}{\arabic{section}}         % Section: 1, 2, ...
-\renewcommand*{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
-\setcounter{tocdepth}{5}
+\renewcommand{\thesubsection}{\arabic{chapter}.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+
+% Reset: pro Kapitel neu anfangen
+\counterwithin*{subsection}{chapter}
+\counterwithin*{subsubsection}{subsection}
+
+% Nummerierungstiefe
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{2} % oder 3, wenn subsubsections ins ToC sollen
+
+\providecommand{\theHchapter}{\arabic{chapter}}
+\renewcommand{\theHsubsection}{\arabic{chapter}.\arabic{subsection}}
+\renewcommand{\theHsubsubsection}{\arabic{chapter}.\arabic{subsection}.\arabic{subsubsection}}
+% -------------------------------------------------
+% Nummerierungen alt
+% -------------------------------------------------
+%\renewcommand*{\thechapter}{\Roman{chapter}}          % Kapitel: I, II, ...
+%\renewcommand*{\thesection}{\arabic{section}}         % Section: 1, 2, ...
+%\renewcommand*{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+%\setcounter{tocdepth}{5}
 
 % -------------------------------------------------
 % Index (einspaltig)
