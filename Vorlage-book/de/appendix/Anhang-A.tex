@@ -1,9 +1,18 @@
 
 \cleardoublepage
 \appendix
-\renewcommand{\thechapter}{A}
+% --- Start Anhang (A, B, C, ...) ---
+\setcounter{chapter}{0} % 1 -> A
+\renewcommand{\thechapter}{\Alph{chapter}}
+\renewcommand{\thesection}{\thechapter.\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
 
-\renewcommand{\thesection}{\Alph{chapter}.\arabic{section}}
+% --- Hyperref: eindeutige Link-Anker (wichtig für korrektes Inhaltsverzeichnis) ---
+\renewcommand{\theHchapter}{app.\Alph{chapter}}
+\renewcommand{\theHsection}{\theHchapter.\arabic{section}}
+\renewcommand{\theHsubsection}{\theHsection.\arabic{subsection}}
+\renewcommand{\theHsubsubsection}{\theHsubsection.\arabic{subsubsection}}
 
 \chapter{Mathematische Hintergründe und Herleitungen}
 \label{anhangA}
